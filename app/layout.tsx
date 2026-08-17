@@ -20,7 +20,11 @@ export const metadata: Metadata = {
   description:
     "4Way Solutions is Chennai's authorised partner for Jaquar sales, service and genuine spares — plus plumbing and home cleaning, handled by one dependable team.",
   icons: {
-    icon: "/logo/4WaySolutions.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo/4WaySolutions-icon.png", type: "image/png" },
+    ],
+    apple: "/logo/4WaySolutions-icon-180.png",
   },
 };
 
