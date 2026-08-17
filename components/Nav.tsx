@@ -105,7 +105,7 @@ export default function Nav() {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className={`lg:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-[5px] rounded-md border transition-colors duration-300 ${
+            className={`lg:hidden touch-manipulation relative w-9 h-9 flex flex-col items-center justify-center gap-[5px] rounded-md border transition-colors duration-300 ${
               solid ? "border-line-strong" : "border-white/30"
             }`}
           >
@@ -128,18 +128,18 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.ul
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden overflow-hidden bg-surface/95 backdrop-blur-md border-t border-line mt-2"
+            className="lg:hidden absolute left-0 right-0 top-full bg-surface/95 backdrop-blur-md border-t border-line"
           >
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block px-6 py-3 text-ink-soft border-b border-line last:border-none"
+                  className="block px-6 py-3 text-ink-soft border-b border-line last:border-none touch-manipulation"
                 >
                   {l.label}
                 </a>
