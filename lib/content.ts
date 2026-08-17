@@ -11,7 +11,7 @@ export const ADDRESS_LINES = [
   "Tamil Nadu, 600087",
 ];
 export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Flat+No+16+Door+No+28%2F38+Gandhi+Street+Near+Chintamani+Vinayagar+Koil+Alwarthirunagar+Chennai+Tamil+Nadu+600087";
+  "https://www.google.com/maps/search/?api=1&query=4Way+Solutions%2C+Flat+No+16%2C+Door%2C+28%2F38%2C+Gandhi+St%2C+near+Pillaiyar+Koil+Street%2C+Alwartirunagar%2C+Chennai%2C+Greater+Chennai%2C+Tamil+Nadu+600087";
 
 export function waLink(text: string) {
   return `https://wa.me/${PHONE_WA}?text=${encodeURIComponent(text)}`;
