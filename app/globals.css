@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F4F7FA;
+  --surface: #FFFFFF;
+  --surface-2: #EAF0F5;
+  --ink: #0E2033;
+  --ink-soft: #45566A;
+  --ink-faint: #7C8CA0;
+  --brand: #1569A7;
+  --brand-strong: #0E4E82;
+  --brand-soft: #DCEAF5;
+  --brass: #B8823E;
+  --brass-soft: #F1E3CB;
+  --line: #D3DEE6;
+  --line-strong: #B7C6D2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #08141F;
+    --surface: #0D2033;
+    --surface-2: #102A40;
+    --ink: #EAF1F7;
+    --ink-soft: #A9BCCB;
+    --ink-faint: #71879C;
+    --brand: #5CADE6;
+    --brand-strong: #8FC7EF;
+    --brand-soft: #13324B;
+    --brass: #D9A25A;
+    --brass-soft: #2E2515;
+    --line: #1A3149;
+    --line-strong: #24455F;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* thin, brand-tinted scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
